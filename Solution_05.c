@@ -1,3 +1,12 @@
+/*
+    [문제를 파악한 내용]
+    - 1 ~ 최대값 사이의 랜덤값을 입력받은 만큼 생성(출력)해야 함
+    - 겹치는 랜덤값이 있어서는 안됨
+    [해결 아이디어]
+    - 배열을 생성해 배열에 랜덤값을 저장
+    - 범위 내의 랜덤값을 받아온 후, 만약 배열에 동일한 랜덤값이 없다면 저장
+*/
+
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <stdlib.h>
@@ -50,4 +59,6 @@ void RottoNum(int max, int num)
             numCount++;
         }
     }
+
+    free(randArray);
 }
